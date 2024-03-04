@@ -20,7 +20,7 @@ function Nav({ user }) {
     <nav>
       <div className="menu-toggle">
         <div className="content">
-          <Link to='/'>
+          <Link to='Home'>
             <h3 style={{ color: 'white' }}>Home</h3>
           </Link>
           {/* <h3>Teams</h3> */}
@@ -28,11 +28,15 @@ function Nav({ user }) {
                   <h3 style={{color:'white'}}>Teams</h3>
                 </Link>
         
+          <Link to="SaveGames">
+                  <h3 style={{color:'white'}}>Saved Games</h3>
+                </Link>
+        
         </div>
       </div>
       <div className="profile" onClick={handleProfileClick}>
         <div className="user">
-          <h3>{user ? user.email : ''}</h3>
+          <h3 style={{color:'white'}}>{user ? user.email : ''}</h3>
         </div>
         <div className="img-box">
           <img src={Logo} alt="" />
